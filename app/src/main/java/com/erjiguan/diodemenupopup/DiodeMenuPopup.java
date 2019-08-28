@@ -15,9 +15,9 @@ public class DiodeMenuPopup extends PopupMenu {
         super(context, anchor);
     }
 
-    public void dimBackground(final float fromDimValue, final float toDimValue, final Window window) {
+    public void dimBackground(final float fromDimValue, final float toDimValue, final long duration, final Window window) {
         ValueAnimator valueAnimator = ValueAnimator.ofFloat(fromDimValue, toDimValue);
-        valueAnimator.setDuration(200);
+        valueAnimator.setDuration(duration);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
